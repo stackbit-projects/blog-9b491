@@ -12,6 +12,7 @@ class Page extends React.Component {
         // on the model of the page (_type in Sanity CMS)
         const componentName = _.get(this.props, 'page.__metadata.modelName');
         const PageLayout = pageLayouts[componentName];
+        console.log({componentName})
         return <PageLayout {...this.props}/>;
     }
 }
